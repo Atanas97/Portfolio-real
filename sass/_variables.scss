@@ -1,0 +1,19 @@
+@use './colors';
+$border-type: 2px dashed colors.$light-orange;
+
+
+//Color object used for each loop
+$skill-colors: ( 
+    fa-html5:#e44d26,
+    fa-css3-alt: #1e95d7, 
+    fa-js-square:#f7e018,
+    fa-bootstrap:#7952b3,
+    );
+
+
+$skill-gradient: (
+    html: linear-gradient(#ffab3d, #f1ad19),
+    css: linear-gradient(#94c3ff, #376fd8), 
+    js: linear-gradient(#e9f361, #fffb17),
+    bootstrap: linear-gradient(#c665ff, #891dee),
+);

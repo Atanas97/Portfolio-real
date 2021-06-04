@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@300;400;600&family=Rubik:wght@300;400;600&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Karla", sans-serif;
+}
+
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.wrap {
+  background: url(../img/cool-background1.png);
+  background-size: cover;
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+header .logo a {
+  color: #272121;
+  font-size: 1.75rem;
+  font-style: oblique;
+}
+header .mobile-nav {
+  position: fixed;
+  right: 5%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.container .left-col,
+.container .right-col {
+  padding-top: 5rem;
+  flex: 2;
+}
+.container .left-col {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 2;
+  text-align: center;
+}
+.container .left-col h1 {
+  font-family: "Rubik", sans-serif;
+  font-size: 2rem;
+}
+.container .left-col p {
+  font-size: 1.25rem;
+}
+.container .social-media a {
+  color: #363333;
+  padding: 0 0.75rem;
+  font-size: 1.5rem;
+}
+.container .right-col img {
+  display: block;
+  width: 100%;
+  max-width: 40rem;
+}
+
+.timeline-section {
+  width: 80vw;
+  max-width: 40rem;
+  margin: 3.5rem auto;
+  display: grid;
+  place-items: center;
+}
+.timeline-section h2 {
+  font-size: 3rem;
+  position: relative;
+}
+.timeline-section h2::before {
+  content: "";
+  width: 200%;
+  position: absolute;
+  top: 100%;
+  height: 0.25rem;
+  left: -50%;
+  background: #FFAC12;
+}
+.timeline-section .timeline {
+  padding: 3rem;
+  line-height: 2;
+}
+.timeline-section .timeline h3 {
+  font-size: 1.5rem;
+}
+.timeline-section .timeline:first-of-type {
+  width: 100%;
+  border-top: 2px dashed #FFAC12;
+  border-right: 2px dashed #FFAC12;
+  border-radius: 1rem;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  margin-top: 3.5rem;
+  margin-right: -2rem;
+}
+.timeline-section .timeline:nth-of-type(2n) {
+  width: 100%;
+  border-left: 2px dashed #FFAC12;
+  border-top: 2px dashed #FFAC12;
+  border-radius: 1rem;
+  border-top-right-radius: 0;
+  border-top-right-radius: 0;
+}
+.timeline-section .timeline:last-of-type {
+  width: 100%;
+  border-right: 2px dashed #FFAC12;
+  border-top: 2px dashed #FFAC12;
+  border-bottom: 2px dashed #FFAC12;
+  border-radius: 1rem;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  margin-left: 2rem;
+}
+
+.skills h2 {
+  font-size: 3rem;
+  position: relative;
+}
+.skills h2::before {
+  content: "";
+  width: 30%;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  height: 0.25rem;
+  background: #FFAC12;
+}
+.skills .skill {
+  display: grid;
+  align-content: center;
+  text-align: center;
+  height: 15rem;
+  padding: 3rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.4);
+}
+.skills .skill i {
+  font-size: 2.5rem;
+}
+.skills .skill .fa-html5 {
+  color: #e44d26;
+}
+.skills .skill .fa-css3-alt {
+  color: #1e95d7;
+}
+.skills .skill .fa-js-square {
+  color: #f7e018;
+}
+.skills .skill .fa-bootstrap {
+  color: #7952b3;
+}
+.skills .skill h4 {
+  line-height: 1.5;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  width: 80vw;
+  grid-gap: 2rem;
+  margin: 3.5rem auto;
+}
+@media screen and (min-width: 45rem) {
+  header {
+    justify-content: space-around;
+  }
+
+  .nav-list {
+    display: flex;
+    justify-content: space-between;
+    width: 30rem;
+  }
+  .nav-list a {
+    color: #272121;
+    padding: 0.25rem;
+    position: relative;
+  }
+  .nav-list a::before {
+    content: "";
+    display: block;
+    height: 2px;
+    position: absolute;
+    background: black;
+    bottom: 0em;
+    left: 0;
+    right: 0;
+    transform: scale(0, 1);
+    transition: all 0.25s ease-in;
+  }
+  .nav-list a:hover::before {
+    transform: scale(1, 1);
+  }
+  .nav-list a:hover {
+    color: #FFAC12;
+  }
+
+  .container {
+    flex-direction: row;
+  }
+}/*# sourceMappingURL=style.css.map */

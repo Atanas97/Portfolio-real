@@ -1,0 +1,278 @@
+@use '../sass/typography';
+@use '../sass/colors';
+@use '../sass/variables';
+@use '../sass/mixins';
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: typography.$headers;
+}
+
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+.text-center{
+    text-align: center;
+}
+//Header styling code
+.wrap {
+    // background: lighten(colors.$light-orange, 25%);
+    background: url(../img/cool-background1.png);
+    background-size: cover;
+    
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    .logo a {
+        color: colors.$dark-gray;
+        font-size: 1.75rem;
+        font-style: oblique;
+    }
+
+    .mobile-nav {
+        position: fixed;
+        right: 5%
+
+    }
+
+    //     .nav {
+    //     position: fixed;
+    //     top: 0;
+    //     right: 0;
+    //     bottom: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     background: colors.$light-gray;
+    //     z-index: 100;
+    //     //remove late
+    //     display: none;
+
+    //         &-list a{
+    //             color: white;
+    //             margin: 3rem;
+    //         }
+    // }
+}
+
+//Hero Section styling code from 68 to 106
+    .container {
+        display: flex;
+        flex-direction: column;
+
+        .left-col,
+        .right-col {
+            padding-top: 5rem;
+            flex: 2;
+        }
+
+        .left-col {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            line-height: 2;
+            text-align: center;
+
+            h1 {
+                font-family: typography.$para;
+                font-size: 2rem;
+                
+            }
+
+            p {
+                font-size: 1.25rem;
+            }
+        }
+        .social-media a{
+                color: colors.$light-gray;
+                padding: 0 0.75rem;
+                font-size: 1.5rem;
+            }
+
+        .right-col img {
+            display: block;
+            width: 100%;
+            max-width: 40rem;
+        }
+    }
+
+
+
+//Timeline styling code from 69 line to 117
+    .timeline-section {
+        width: 80vw;
+        max-width: 40rem;
+        margin: 3.5rem auto;
+        display: grid;
+        place-items: center;
+
+        h2 {
+            font-size: 3rem;
+            position: relative;
+
+            &::before{
+                content: "";
+                width: 200%;
+                position: absolute;
+                top: 100%;
+                height: 0.25rem;
+                left: -50%;
+                background: colors.$light-orange;
+            }
+        }
+
+        .timeline {
+            padding: 3rem;
+            line-height: 2;
+
+            h3 {
+                font-size: 1.5rem;
+            }
+        }
+
+        .timeline:first-of-type {
+            width: 100%;
+            border-top: variables.$border-type;;
+            border-right: variables.$border-type;;
+            border-radius: 1rem;
+            border-bottom-left-radius: 0;
+            border-top-left-radius: 0;
+            margin-top: 3.5rem;
+            margin-right: -2rem;
+        }
+        .timeline:nth-of-type(2n) {
+            width: 100%;
+            border-left: variables.$border-type;
+            border-top: variables.$border-type;
+            border-radius: 1rem;
+            border-top-right-radius: 0;
+            border-top-right-radius: 0;
+        }
+        .timeline:last-of-type{
+            width: 100%;
+            border-right: variables.$border-type;
+            border-top:variables.$border-type;
+            border-bottom: variables.$border-type;
+            border-radius: 1rem;
+            border-bottom-left-radius: 0;
+            border-top-left-radius: 0;
+            margin-left: 2rem;
+        }
+    }
+
+//Skills section code from line 173 to 184
+.skills {
+        h2 {
+        font-size: 3rem;
+        position: relative;
+
+        &::before{
+            content: "";
+            width: 30%;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            height: 0.25rem;
+            background: colors.$light-orange;
+        }
+    }
+
+    .skill {
+        display: grid;
+        align-content: center;
+        text-align: center;
+        height: 15rem;
+        padding: 3rem;
+        border: 1px solid #ccc;
+        border-radius: 0.5rem;
+        box-shadow:0px 0px 5px 2px rgba(0, 0, 0, .4);
+        i {
+                font-size: 2.5rem;
+            }
+            @each $name, $color in variables.$skill-colors {
+                    .#{$name} {
+                        color: $color;
+                    }
+                }
+        h4 {
+            line-height: 1.5;
+        }
+    }
+}
+
+.grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        width: 80vw;
+        grid-gap: 2rem;
+        margin: 3.5rem auto;
+
+        .skill {
+        
+            
+        }    
+    }
+
+
+@media screen and (min-width: 45rem) {
+    header {
+        justify-content: space-around;
+    }
+    .nav-list {
+        display: flex;
+        justify-content: space-between;
+        width: 30rem;
+        
+
+        a{
+            color: colors.$dark-gray;
+            padding: 0.25rem;
+            position: relative;
+
+            &::before{
+                content: '';
+                display: block;
+                height: 2px;
+                position: absolute;
+                background: black;
+                bottom: 0em;
+                left: 0;
+                right: 0;
+                transform: scale(0, 1);
+                transition: all 0.25s ease-in;
+            }
+            &:hover::before {
+                transform: scale(1,1);
+                
+            }
+            &:hover {
+                color: colors.$light-orange;
+            }
+        }
+        
+    }
+
+    .container {
+        flex-direction: row;
+    }
+
+    
+}
+
