@@ -73,34 +73,60 @@
             </div>
         </section>
 
+        <!--Timeline markup-->
         <section class="timeline-section">
             <h2 class="text-center">Timeline</h2>
+            <div class="timeline-wrap">
 
-            <div class="timeline">
-                <article>
-                    <h3>Economic Informatics</h3>
-                    <p>PG "Akademik S. Pavlovich Korolyov"</p>
-                    <small>09/2011 - 06/2016</small>
-                </article>
+                <div class="timeline">
+                    <div class="timeline-container">
+                        <article>
+                            <h3>Economic Informatics</h3>
+                            <p>PG "Akademik S. Pavlovich Korolyov"</p>
+                            <small>09/2011 - 06/2016</small>
+                        </article>
+                        <img src="./img/school.svg" alt="school svg">
+                    </div>
+                </div>
+
+                <div class="timeline">
+                    <div class="timeline-container">
+                        <img src="./img/university.svg" alt="university svg">
+                        <article>
+                            <h3>Telecommunications</h3>
+                            <p>Technical University of Sofia</p>
+                            <small>09/2016 - 06/2020</small>
+                        </article>
+                    </div>
+
+                </div>
+                <div class="timeline">
+                    <div class="timeline-container">
+                        <article>
+                            <h3>Web Programming</h3>
+                            <p>SoftAcademy</p>
+                            <small>11/2020 - 01/2021</small>
+                        </article>
+                        <img src="./img/academy.svg" alt="coding academy">
+                    </div>
+                </div>
+
+                <div class="timeline">
+                    <div class="timeline-container">
+                        <img src="./img/self-taught.svg" alt="person learning">
+                        <article>
+                            <h3>Self taught!</h3>
+                            <small>01/2021 - till now!</small>
+                        </article>
+                    </div>
+                </div>
             </div>
-            <div class="timeline">
-                <article>
-                    <h3>Telecommunications</h3>
-                    <p>Technical University of Sofia</p>
-                    <small>09/2016 - 06/2020</small>
-                </article>
-            </div>
-            <div class="timeline">
-                <article>
-                    <h3>Web Programming</h3>
-                    <p>SoftAcademy</p>
-                    <small>11/2020 - 01/2021</small>
-                </article>
-            </div>
+
 
         </section>
 
-        <section class="skills">
+        <!--Tech stack markup-->
+        <section class="skills-section">
             <h2 class="text-center">Tech Stack</h2>
             <div class="grid-container">
                 <div class="skill html">
@@ -113,9 +139,10 @@
                     <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda architecto id veniam ea
                         debitis mollitia!</h4>
                 </div>
-                <div class="sub-item">
+                <div class="skill">
                     <i class="fab fa-sass"></i>
-                    <h4>Sass</h4>
+                    <h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus numquam atque odio optio
+                        expedita ipsam!</h4>
                 </div>
 
                 <div class="skill js">
@@ -130,7 +157,43 @@
                 </div>
             </div>
         </section>
+
+        <!--Projects section markup-->
+
+
+        <!--Contact form markup-->
+        <section class="contact-section">
+            <h2>Contact Me!</h2>
+
+            <div class="contact-form">
+                <form>
+                    <div class="form-field">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" placeholder="Your name...">
+                    </div>
+
+                    <div class="form-field">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" placeholder="Your email...">
+                    </div>
+
+                    <div class="form-field">
+                        <textarea name="description" cols="30" rows="10" placeholder="Write me!"></textarea>
+                    </div>
+
+                    <div class="form-field">
+                        <button type="submit" class="form-send">Send</button>
+                    </div>
+                </form>
+            </div>
+
+        </section>
+
     </main>
+    <!--Footer markup-->
+    <footer>
+        <p>Made with <i class="fas fa-heart"></i> from Atanas Iskrenov <sup>TM</sup></p>
+    </footer>
 </body>
 
 </html>

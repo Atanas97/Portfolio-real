@@ -84,8 +84,6 @@ header .mobile-nav {
   width: 80vw;
   max-width: 40rem;
   margin: 3.5rem auto;
-  display: grid;
-  place-items: center;
 }
 .timeline-section h2 {
   font-size: 3rem;
@@ -93,19 +91,32 @@ header .mobile-nav {
 }
 .timeline-section h2::before {
   content: "";
-  width: 200%;
+  width: 100%;
   position: absolute;
   top: 100%;
-  height: 0.25rem;
-  left: -50%;
+  height: 0.15rem;
+  left: 0;
   background: #FFAC12;
 }
 .timeline-section .timeline {
   padding: 3rem;
   line-height: 2;
+  text-align: center;
 }
 .timeline-section .timeline h3 {
   font-size: 1.5rem;
+}
+.timeline-section .timeline .timeline-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.timeline-section .timeline .timeline-container img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  display: block;
+  width: 100%;
+  max-width: 10rem;
 }
 .timeline-section .timeline:first-of-type {
   width: 100%;
@@ -115,41 +126,54 @@ header .mobile-nav {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
   margin-top: 3.5rem;
-  margin-right: -2rem;
+  margin-right: -1rem;
 }
 .timeline-section .timeline:nth-of-type(2n) {
   width: 100%;
   border-left: 2px dashed #FFAC12;
   border-top: 2px dashed #FFAC12;
+  border-right: 0;
   border-radius: 1rem;
   border-top-right-radius: 0;
   border-top-right-radius: 0;
+  margin-left: -1rem;
 }
-.timeline-section .timeline:last-of-type {
+.timeline-section .timeline:nth-of-type(2n) .timeline-container {
+  padding-left: 1rem;
+}
+.timeline-section .timeline:nth-of-type(3n) {
   width: 100%;
   border-right: 2px dashed #FFAC12;
   border-top: 2px dashed #FFAC12;
+  border-radius: 1rem;
+  border-top-left-radius: 0;
+}
+.timeline-section .timeline:last-of-type {
+  width: 100%;
+  border-top: 2px dashed #FFAC12;
   border-bottom: 2px dashed #FFAC12;
   border-radius: 1rem;
-  border-bottom-left-radius: 0;
-  border-top-left-radius: 0;
-  margin-left: 2rem;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+.timeline-section .timeline:last-of-type .timeline-container {
+  padding-left: 1rem;
 }
 
-.skills h2 {
+.skills-section h2 {
   font-size: 3rem;
   position: relative;
 }
-.skills h2::before {
+.skills-section h2::before {
   content: "";
-  width: 30%;
+  width: 80%;
   position: absolute;
   top: 100%;
-  left: 50%;
-  height: 0.25rem;
+  height: 0.15rem;
+  left: 10%;
   background: #FFAC12;
 }
-.skills .skill {
+.skills-section .skill {
   display: grid;
   align-content: center;
   text-align: center;
@@ -159,32 +183,90 @@ header .mobile-nav {
   border-radius: 0.5rem;
   box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.4);
 }
-.skills .skill i {
+.skills-section .skill i {
   font-size: 2.5rem;
 }
-.skills .skill .fa-html5 {
+.skills-section .skill .fa-html5 {
   color: #e44d26;
 }
-.skills .skill .fa-css3-alt {
+.skills-section .skill .fa-css3-alt {
   color: #1e95d7;
 }
-.skills .skill .fa-js-square {
+.skills-section .skill .fa-js-square {
   color: #f7e018;
 }
-.skills .skill .fa-bootstrap {
+.skills-section .skill .fa-bootstrap {
   color: #7952b3;
 }
-.skills .skill h4 {
+.skills-section .skill h4 {
   line-height: 1.5;
 }
 
 .grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  width: 80vw;
+  width: 90vw;
   grid-gap: 2rem;
   margin: 3.5rem auto;
 }
+
+.contact-section {
+  width: 90vw;
+  margin: 0 auto;
+}
+.contact-section .form-field {
+  margin: 1rem 0;
+}
+.contact-section .form-field:last-of-type {
+  display: flex;
+  justify-content: flex-end;
+}
+.contact-section label {
+  display: inline-block;
+  margin-bottom: 0.25rem;
+}
+.contact-section input {
+  display: block;
+  height: 3rem;
+  padding-left: 0.5rem;
+  font-size: 0.95rem;
+  width: 100%;
+  border-radius: 0.25rem;
+  border: 1px solid #363333;
+  outline-color: #FFAC12;
+}
+.contact-section textarea {
+  display: block;
+  width: 100%;
+  font-size: 0.95rem;
+  padding-left: 0.5rem;
+  padding-top: 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid #363333;
+  resize: none;
+}
+.contact-section button {
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  color: #FFAC12;
+  background: none;
+  border: 1px solid #6a6565;
+  border-radius: 0.2rem;
+}
+.contact-section button:hover {
+  color: #6a6565;
+  background: #ffbe45;
+  cursor: pointer;
+}
+
+footer {
+  background: #FFAC12;
+  text-align: center;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+}
+
 @media screen and (min-width: 45rem) {
   header {
     justify-content: space-around;
@@ -221,5 +303,27 @@ header .mobile-nav {
 
   .container {
     flex-direction: row;
+  }
+
+  .timeline-section h2::before {
+    width: 50%;
+    left: 25%;
+  }
+
+  .timeline-container {
+    flex-direction: row !important;
+    justify-content: space-around;
+  }
+
+  input,
+textarea {
+    width: 30rem !important;
+  }
+
+  .form-field:last-of-type {
+    justify-content: flex-start !important;
+  }
+  .form-field:last-of-type button {
+    width: 10rem;
   }
 }/*# sourceMappingURL=style.css.map */

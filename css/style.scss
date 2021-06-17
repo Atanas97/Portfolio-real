@@ -120,8 +120,6 @@ header {
         width: 80vw;
         max-width: 40rem;
         margin: 3.5rem auto;
-        display: grid;
-        place-items: center;
 
         h2 {
             font-size: 3rem;
@@ -129,11 +127,11 @@ header {
 
             &::before{
                 content: "";
-                width: 200%;
+                width: 100%;
                 position: absolute;
                 top: 100%;
-                height: 0.25rem;
-                left: -50%;
+                height: 0.15rem;
+                left: 0;
                 background: colors.$light-orange;
             }
         }
@@ -141,9 +139,21 @@ header {
         .timeline {
             padding: 3rem;
             line-height: 2;
-
+            text-align: center;
             h3 {
                 font-size: 1.5rem;
+            }
+            .timeline-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                
+                img {
+                    object-fit: contain;
+                    display: block;
+                    width: 100%;
+                    max-width: 10rem;
+                }
             }
         }
 
@@ -155,44 +165,61 @@ header {
             border-bottom-left-radius: 0;
             border-top-left-radius: 0;
             margin-top: 3.5rem;
-            margin-right: -2rem;
+            margin-right: -1rem;
         }
         .timeline:nth-of-type(2n) {
             width: 100%;
             border-left: variables.$border-type;
             border-top: variables.$border-type;
+            border-right: 0;
             border-radius: 1rem;
             border-top-right-radius: 0;
             border-top-right-radius: 0;
+            margin-left: -1rem;
+
+            //Adding 1rem of padding to even out the added negative 1margin for the parent container
+                .timeline-container {
+                    padding-left: 1rem;
+                }
+        }
+        .timeline:nth-of-type(3n){
+            width: 100%;
+            border-right: variables.$border-type;
+            border-top: variables.$border-type;
+            border-radius: 1rem;
+            border-top-left-radius: 0;
         }
         .timeline:last-of-type{
             width: 100%;
-            border-right: variables.$border-type;
             border-top:variables.$border-type;
             border-bottom: variables.$border-type;
             border-radius: 1rem;
-            border-bottom-left-radius: 0;
-            border-top-left-radius: 0;
-            margin-left: 2rem;
+            border-bottom-right-radius: 0;
+            border-top-right-radius: 0;
+
+            //Adding 1rem of padding to even out the added negative 1margin for the parent container
+            .timeline-container {
+                    padding-left: 1rem;
+                }
         }
     }
 
 //Skills section code from line 173 to 184
-.skills {
+.skills-section {
         h2 {
-        font-size: 3rem;
-        position: relative;
+            font-size: 3rem;
+            position: relative;
 
-        &::before{
-            content: "";
-            width: 30%;
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            height: 0.25rem;
-            background: colors.$light-orange;
+            &::before{
+                content: "";
+                width: 80%;
+                position: absolute;
+                top: 100%;
+                height: 0.15rem;
+                left: 10%;
+                background: colors.$light-orange;
+            }
         }
-    }
 
     .skill {
         display: grid;
@@ -218,18 +245,77 @@ header {
 }
 
 .grid-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-        width: 80vw;
-        grid-gap: 2rem;
-        margin: 3.5rem auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    width: 90vw;
+    grid-gap: 2rem;
+    margin: 3.5rem auto;
+}
 
-        .skill {
-        
-            
-        }    
+.contact-section {
+    width: 90vw;
+    margin: 0 auto;
+
+    .form-field {
+        margin: 1rem 0;
+
+        &:last-of-type{
+            display: flex;
+            justify-content: flex-end;
+        }
     }
 
+    label{
+        display: inline-block;
+        margin-bottom: 0.25rem;
+    }
+
+    input {
+        display: block;
+        height: 3rem;
+        padding-left: 0.5rem;
+        font-size: 0.95rem;
+        width: 100%;
+        border-radius: .25rem;
+        border: 1px solid colors.$light-gray;
+        outline-color: colors.$light-orange;
+    }
+
+    textarea {
+        display: block;
+        width: 100%;
+        font-size: 0.95rem;
+        padding-left: 0.5rem;
+        padding-top: 0.5rem;
+        border-radius: .25rem;
+        border: 1px solid colors.$light-gray;
+        resize: none;
+    }
+    
+    button {
+        padding: 0.5rem 1.5rem;
+        font-size: 1rem;
+        color: colors.$light-orange;
+        background: none;
+        border: 1px solid lighten(colors.$light-gray, 20%);
+        border-radius: 0.2rem;
+
+        &:hover{
+            color:lighten(colors.$light-gray, 20%);
+            background: lighten(colors.$light-orange, 10%);
+            cursor: pointer;
+        }
+    }
+    
+}
+
+footer {
+    background: colors.$light-orange;
+    text-align: center;
+    height: 2rem;
+    display: grid;
+    place-items: center;
+}
 
 @media screen and (min-width: 45rem) {
     header {
@@ -273,6 +359,27 @@ header {
         flex-direction: row;
     }
 
-    
-}
+    .timeline-section
+        h2::before{
+        width: 50%;
+        left: 25%;
+    }
 
+    .timeline-container {
+        flex-direction: row !important;
+        justify-content: space-around;
+    }
+
+    input,
+    textarea{
+        width: 30rem !important;
+    }
+
+    .form-field:last-of-type {
+        justify-content: flex-start !important;
+        
+        button{
+            width: 10rem;
+        }
+    }
+}
