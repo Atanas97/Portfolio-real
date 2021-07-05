@@ -21,17 +21,23 @@
                 </h1>
             </div>
 
-            <!-- <div class="mobile-nav">+</div> -->
+
+            <span class="toggle-nav">
+                <i class="fas fa-bars"></i>
+            </span>
             <nav class="nav">
                 <ul class="nav-list">
                     <li>
-                        <a href="#">Home</a>
+                        <a href="#" style="--order: 1">Home</a>
                     </li>
                     <li>
-                        <a href="#">About Me</a>
+                        <a href="#about" style="--order: 2">About Me</a>
                     </li>
                     <li>
-                        <a href="#">Contact me</a>
+                        <a href="#projects" style="--order: 3">Projects</a>
+                    </li>
+                    <li>
+                        <a href="#contact" style="--order: 4">Contact me</a>
                     </li>
                 </ul>
             </nav>
@@ -39,37 +45,72 @@
 
         <section class="hero-section">
             <div class="container">
+                <img src="./img/pic1.svg" alt="" data-speed='-4' class="layer">
+                <img src="./img/pic2.svg" alt="" data-speed='5' class="layer">
+                <img src="./img/pic3.svg" alt="" data-speed='3' class="layer">
+                <img src="./img/pic4.svg" alt="" data-speed='3' class="layer">
+                <img src="./img/pic5.svg" alt="" data-speed='1' class="layer">
+                <img src="./img/pic6.svg" alt="" data-speed='2' class="layer">
+                <img src="./img/pic7.svg" alt="" data-speed='6' class="layer">
+                <img src="./img/pic8.svg" alt="" data-speed='4' class="layer">
+                <img src="./img/pic9.svg" alt="" data-speed='-5' class="layer">
                 <div class="left-col">
-                    <h1>Hello!
-                        I'm Atanas Iskrenov</h1>
+                    <h2>Hello! I'm <span>Atanas Iskrenov</span></h2>
                     <p>Young, aspiring Web Developer!</p>
-                    <span class="social-media">
-                        <a href="https://www.facebook.com/profile.php?id=100007463286638" target="_blank">
+                    <!--Change buttons for download cv btn-->
+                    <!-- <span class="social-media">
+                        <a href="https://www.facebook.com/profile.php?id=100007463286638" target="blank">
                             <i class="fab fa-facebook-square"></i>
                         </a>
-                        <a href="https://github.com/Atanas97" target="_blank">
+                        <a href="https://github.com/Atanas97" target="blank">
                             <i class="fab fa-github"></i>
                         </a>
                         <a href="#">
                             <i class="fas fa-mobile-alt"></i>
                         </a>
-                        <a href="https://www.linkedin.com/in/atanas-iskrenov/" target="_blank">
+                        <a href="https://www.linkedin.com/in/atanas-iskrenov/" target="blank">
                             <i class="fab fa-linkedin"></i>
                         </a>
-                    </span>
+                    </span> -->
+                    <div class="download-cv">
+                        <a href="./cv/AtanasIskrenovResume.pdf" download>
+                            <i class="fas fa-download"></i> Download my CV!
+                        </a>
+                    </div>
+
                 </div>
                 <div class="right-col">
-                    <img src="./img/Web Developer.svg" alt="Web Developer" target="_blank">
+                    <img src="./img/Web Developer.svg" alt="Web Developer" target="blank">
                 </div>
             </div>
+
         </section>
     </div>
 
     <main>
 
         <section>
-            <div class="about-me">
 
+            <div class="about-me">
+                <div class="about-me-container">
+                    <div class="about-me-left">
+                        <h3>A quick introduction:</h3>
+                        <p>I am an aspiring web developer named <b>Atanas Iskrenov</b>. I have studied
+                            Telecommunications in Technical University of Sofia
+                            but I have found my true passion in front end - creating beautiful, responsive and user
+                            friendly websites.
+                        </p>
+                        <ul>
+                            <li>Motivated</li>
+                            <li>Purposeful</li>
+                            <li>Dedicated</li>
+                        </ul>
+                        <p>I am still a novice but I have the to not quit learning and improving as a web developer and
+                            a
+                            person.</p>
+                    </div>
+                    <div class="about-me-right"></div>
+                </div>
             </div>
         </section>
 
@@ -101,13 +142,14 @@
 
                 </div>
                 <div class="timeline">
-                    <div class="timeline-container">
+                    <div class="timeline-container" id="mouseover-certificate">
                         <article>
                             <h3>Web Programming</h3>
                             <p>SoftAcademy</p>
                             <small>11/2020 - 01/2021</small>
                         </article>
                         <img src="./img/academy.svg" alt="coding academy">
+
                     </div>
                 </div>
 
@@ -122,11 +164,11 @@
                 </div>
             </div>
 
-
+            <img src="./img/Atanas-Iskrenov.jpg" alt="atanas-iskrenov certificate" class="certificate">
         </section>
 
         <!--Tech stack markup-->
-        <section class="skills-section">
+        <section class="skills-section" id="about">
             <h2 class="text-center">Tech Stack</h2>
             <div class="grid-container">
                 <div class="skill html">
@@ -158,23 +200,137 @@
             </div>
         </section>
 
-        <!--Projects section markup-->
 
+        <!--Projects section markup-->
+        <section class="projects" id="projects">
+            <h2 class="text-center">Projects</h2>
+            <div class="projects-container">
+                <div class="projects-left">
+                    <ul>
+                        <li class="active">Thatix</li>
+                        <li>Quizz Game</li>
+                        <li>Chuck Norris</li>
+                        <li>Waves Website</li>
+                        <li>Weather App</li>
+                    </ul>
+                </div>
+
+                <div class="projects-right active">
+                    <!--Project 1-->
+                    <div class="projects-info">
+                        <p>Finishing project for the SoftAcademy course. Mainly html and css, some js and jquery for
+                            ajax request, but nothing too special. Yes, there are mistakes in it which I haven't
+                            fixed
+                            to showcase my improvement with the other projects.
+                        </p>
+                        <span>
+                            <a href="https://adoring-kilby-1abeb9.netlify.app/index.html" target="blank"><i
+                                    class="fas fa-external-link-alt"></i>Live Demo</a>
+                            <a href="https://github.com/Atanas97/SoftAcademy-Project" target="blank"><i
+                                    class="fas fa-external-link-alt"></i>Source Code</a>
+                        </span>
+                    </div>
+                    <div class="projects-img">
+                        <img src="./img/thatix.png" alt="thatix website">
+                    </div>
+                </div>
+                <!--Project 2-->
+                <div class="projects-right">
+                    <div class="projects-info">
+                        <p>Javascript based quizz game just to practice my JavaScript skills! Preloaded questions and
+                            answer from an array of objects</p>
+                        <span>
+                            <a href="https://amazing-hypatia-bf1e28.netlify.app/" target="blank"><i
+                                    class="fas fa-external-link-alt"></i>Live Demo</a>
+                            <a href="https://github.com/Atanas97/Quizz-App" target="blank"><i
+                                    class="fas fa-external-link-alt"></i>Source Code</a>
+                        </span>
+                    </div>
+                    <div class="projects-img">
+                        <video width="320" height="240" autoplay loop>
+                            <source src="./video/quizzVid.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <!--Project 3-->
+                <div class="projects-right">
+                    <div class="projects-info">
+                        <p>Using an API to dynamically generate some funny Chuck Norris jokes!</p>
+                        <span>
+                            <a href="https://affectionate-shock.netlify.app/" target="blank"><i
+                                    class="fas fa-external-link-alt"></i>Live
+                                Demo</a>
+                            <a href="https://github.com/Atanas97/chuck-norris-jokes" target="blank"><i
+                                    class="fas fa-external-link-alt"></i>Source
+                                Code</a>
+                        </span>
+                    </div>
+                    <div class="projects-img">
+                        <video width="320" height="240" autoplay loop>
+                            <source src="./video/chuck norris.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <!--Project 4-->
+                <div class="projects-right">
+
+                    <div class="projects-info">
+                        <p>Turned out to be just a project for me to test out my Bootstrap skills. Decided to not use it
+                            as a portfolio
+                            website because Bootstrap wouldn't showcase any skills.
+                        </p>
+                        <span>
+                            <a href="https://just-a-test1.netlify.app/" target="blank"><i
+                                    class="fas fa-external-link-alt"></i>Live
+                                Demo</a>
+                            <a href="https://github.com/Atanas97/portfolio" target="blank"><i
+                                    class="fas fa-external-link-alt"></i>Source
+                                Code</a>
+                        </span>
+                    </div>
+                    <div class="projects-img">
+                        <img src="./img/waves-site.png" alt="portfolio test website">
+                    </div>
+                </div>
+                <!--Project 5-->
+                <div class="projects-right">
+                    <div class="projects-info">
+                        <p>My diploma project for graduating Technical University of Sofia. A weather app with a
+                            register-login system,
+                            with the user information being stored into MongoDB. The app uses OpenWeatherAPI to generate
+                            all the data dynamically.
+                        </p>
+                        <a href="https://github.com/Atanas97/Weather-App" target="blank"><i
+                                class="fas fa-external-link-alt"></i>Source Code</a>
+                    </div>
+                    <div class="projects-img">
+                        <img src="./img/thatix.png" alt="thatix website">
+                    </div>
+                </div>
+            </div>
+
+        </section>
 
         <!--Contact form markup-->
-        <section class="contact-section">
-            <h2>Contact Me!</h2>
-
+        <section class="contact-section" id="contact">
             <div class="contact-form">
-                <form>
+                <h2>Contact Me!</h2>
+                <form action='/' method="POST" id="form">
                     <div class="form-field">
-                        <label for="name">Name</label>
-                        <input type="text" name="name" placeholder="Your name...">
+                        <label for="username">Username</label>
+                        <input type="text" name="username" id="username" autocomplete="off"
+                            placeholder="Your Username...">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-times-circle"></i>
+                        <small></small>
                     </div>
 
                     <div class="form-field">
                         <label for="email">Email</label>
-                        <input type="email" name="email" placeholder="Your email...">
+                        <input type="email" id="email" placeholder="Your Email..." autocomplete="off">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-times-circle"></i>
+                        <small></small>
                     </div>
 
                     <div class="form-field">
@@ -187,6 +343,46 @@
                 </form>
             </div>
 
+            <div class="social-form">
+                <h2>Contact me the other way!</h2>
+                <div class="socials">
+                    <div class="socials-field">
+                        <a href="https://www.facebook.com/profile.php?id=100007463286638" target="blank">
+                            <img src="img/facebook.svg" alt="Facebook logo">
+                        </a>
+                        <p> - facebook.com/atanasiskrenov</p>
+                    </div>
+
+                    <div class="socials-field">
+                        <a href="" target="blank">
+                            <img src="img/email.svg" alt="email logo">
+                        </a>
+                        <p>- aiskrenov1@gmail.com</p>
+                    </div>
+
+                    <div class="socials-field">
+                        <a href="https://github.com/Atanas97" target="blank">
+                            <img src="img/github.svg" alt="github logo">
+                        </a>
+                        <p>- github.com/Atanas97</p>
+                    </div>
+
+                    <div class="socials-field">
+                        <a href="https://www.linkedin.com/in/atanas-iskrenov/" target="blank">
+                            <img src="img/linkedin.svg" alt="linked in logo">
+                        </a>
+                        <p>- linkedin.com/in/atanas-iskrenov</p>
+                    </div>
+
+                    <div class="socials-field">
+                        <a href="" target="blank">
+                            <img src="img/smartphone.svg" alt="mobile phone logo">
+                        </a>
+                        <p>- 0896990555</p>
+                    </div>
+                </div>
+            </div>
+
         </section>
 
     </main>
@@ -194,6 +390,7 @@
     <footer>
         <p>Made with <i class="fas fa-heart"></i> from Atanas Iskrenov <sup>TM</sup></p>
     </footer>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
