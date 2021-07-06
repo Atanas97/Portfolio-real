@@ -29,8 +29,13 @@ li {
     text-align: center;
 }
 
+.gradient{
+    background: rgb(255,143,112);
+    background: linear-gradient(145deg, rgba(255,143,112,1) 0%, rgba(237,221,140,1) 100%);
+}
+
 .spacing > * + * {
-    margin-top: 2rem 0 !important;
+    margin-top: 2rem!important;
 }
 
 //Header styling code
@@ -112,7 +117,7 @@ header {
         flex-direction: column;
         position: relative;
         width: 100vw;
-        height: 100vh;
+        height: 40rem;
         overflow: hidden;
     
         img{display: none;}
@@ -360,7 +365,7 @@ header {
 }
 
 .contact-section{
-    margin-top: 35rem;
+    margin-top: 5rem;
 }
 
 .contact-form{
@@ -375,13 +380,10 @@ header {
 
     i {
         position: absolute;
-        left: 85%;
-        top: 50%;
+        right: 0.25rem;
+        top: 52%;
         transform: translate(-50%, -50%);
         visibility: hidden;
-    }
-    small {
-        padding-left: 4rem;
     }
 
     &:last-of-type{
@@ -463,11 +465,17 @@ textarea {
     
 }
 
+
+
+
 .socials-field {
     display: flex;
-    justify-content: space-around;
     align-items: center;
-    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 70%;
+    max-width: 30rem;
+    margin: 0 auto;
 }
 .social-form h2 {
     text-align: center;
@@ -485,12 +493,15 @@ textarea {
 }
 //projects section
 .projects {
-    width: 90vw;
+    width: 100vw;
     margin: 0 auto;
     position: relative;
+    height: 50rem;
+    background: rgb(255,143,112);
+    background: linear-gradient(145deg, rgba(255,143,112,1) 0%, rgba(237,221,140,1) 100%);
     h2 {
         font-size: 3rem;
-        margin-bottom: 2rem;
+        padding: 2rem 0;
     }
 
     &-left {
@@ -500,7 +511,7 @@ textarea {
         // place-items: center;
         ul {
             display: flex;
-            gap: 0.5rem;
+            gap: 1rem;
             flex-wrap: wrap;
             text-align: center;
             
@@ -524,6 +535,11 @@ textarea {
         position: absolute;
         clip-path: polygon(0% 0%, 0 0, 0 52%, 0 100%, 0% 100%);
         transition: 550ms clip-path ease-in-out;
+
+        p{
+            width: 90%;
+            margin: 0 auto;
+        }
     }
     &-right.active {
         clip-path: polygon(0% 0%, 100% 0, 100% 56%, 100% 100%, 0 100%);
@@ -535,7 +551,7 @@ textarea {
         a {
             color: inherit;
             display: inline-block;
-            border: 1px solid #ccc;
+            border: 1px solid colors.$light-gray;
             margin-top: 1rem;
             padding: .75rem 1.25rem;
             font-size: .9rem;
@@ -604,7 +620,7 @@ footer {
                 
             }
             &:hover {
-                color: colors.$light-orange;
+                color: lighten(colors.$light-gray, 60%);
             }
         }
     }
@@ -656,8 +672,10 @@ footer {
 
     //Project section
     .projects {
+        width: 100vw;
         margin-top: 10rem;
         flex-direction: row;  
+        height: 40rem;
 
         &-container {
             display: flex;
@@ -669,17 +687,13 @@ footer {
         }
         &-right {
                 width: 100vw;
-                height: 30rem;
                 justify-content: space-around;
-                top: 70%;
+                left: 50%;
                 left: 50%;
                 transform: translate(-50%);
                 flex-direction: row;  
-                margin-top: 5rem;
-                background: rgb(255,143,112);
-                background: linear-gradient(145deg, rgba(255,143,112,1) 0%, rgba(237,221,140,1) 100%);
-
-                
+                height: 30rem;
+                margin-top: 2rem;
             }
         &-info {
             width: 50vw;
@@ -729,7 +743,7 @@ footer {
 
     .contact-section {
         display: flex;
-        margin-top: 40rem;
+        margin-top: 20rem;
         
         .social-form, 
         .contact-form {
@@ -744,11 +758,7 @@ footer {
         }
 
         .socials {
-            display: grid;
-            // grid-template-areas: "social1 social2"
-            //                     "social3 social4"
-            //                     ".       social5";
-            grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+            
         }
 
         .social-form img {
