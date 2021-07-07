@@ -54,7 +54,7 @@
                 <img src="./img/pic7.svg" alt="" data-speed='6' class="layer">
                 <img src="./img/pic8.svg" alt="" data-speed='4' class="layer">
                 <img src="./img/pic9.svg" alt="" data-speed='-5' class="layer">
-                <div class="left-col">
+                <div class="left-col spacing">
                     <h2>Hello! I'm <span>Atanas Iskrenov</span></h2>
                     <p>Young, aspiring Web Developer!</p>
                     <!--Change buttons for download cv btn-->
@@ -89,11 +89,12 @@
 
     <main>
 
+        <!--About me section-->
         <section>
-
             <div class="about-me">
                 <div class="about-me-container">
-                    <div class="about-me-left">
+                    <img src="./img/Designer.svg" alt="designer svg">
+                    <div class="about-me-col">
                         <h3>A quick introduction:</h3>
                         <p>I am an aspiring web developer named <b>Atanas Iskrenov</b>. I have studied
                             Telecommunications in Technical University of Sofia
@@ -105,11 +106,10 @@
                             <li>Purposeful</li>
                             <li>Dedicated</li>
                         </ul>
-                        <p>I am still a novice but I have the to not quit learning and improving as a web developer and
-                            a
-                            person.</p>
+                        <p>I am still a novice but I have the will to not quit learning and improving as a web developer
+                            and
+                            a person.</p>
                     </div>
-                    <div class="about-me-right"></div>
                 </div>
             </div>
         </section>
@@ -142,7 +142,7 @@
 
                 </div>
                 <div class="timeline">
-                    <div class="timeline-container" id="mouseover-certificate">
+                    <div class="timeline-container" id="show-certificate">
                         <article>
                             <h3>Web Programming</h3>
                             <p>SoftAcademy</p>
@@ -306,7 +306,9 @@
                                 class="fas fa-external-link-alt"></i>Source Code</a>
                     </div>
                     <div class="projects-img">
-                        <img src="./img/thatix.png" alt="thatix website">
+                        <video width="320" height="240" autoplay loop>
+                            <source src="./video/weatherapp.mp4" type="video/mp4">
+                        </video>
                     </div>
                 </div>
             </div>
@@ -317,7 +319,7 @@
         <section class="contact-section" id="contact">
             <div class="contact-form">
                 <h2>Contact Me!</h2>
-                <form action='/' method="POST" id="form">
+                <form action="https://formspree.io/f/xoqylozr" method="POST" id="form">
                     <div class="form-field">
                         <label for="username">Username</label>
                         <input type="text" name="username" id="username" autocomplete="off"
@@ -329,7 +331,7 @@
 
                     <div class="form-field">
                         <label for="email">Email</label>
-                        <input type="email" id="email" placeholder="Your Email..." autocomplete="off">
+                        <input type="email" name="email" id="email" placeholder="Your Email..." autocomplete="off">
                         <i class="fas fa-check-circle"></i>
                         <i class="fas fa-times-circle"></i>
                         <small></small>

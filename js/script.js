@@ -42,12 +42,13 @@ menuItems.forEach(item => {
 
 
 //Show certificate on mouse hover 
-const certificateShow = document.getElementById('mouseover-certificate')
+const certificateShow = document.getElementById('show-certificate')
 const certificate = document.querySelector('.certificate')
 function showCertificate() {
     certificate.classList.add('active')
+    console.log('hello')
 }
-
+console.log(certificateShow)
 function hideCertificate() {
     certificate.classList.remove('active')
 }
@@ -118,9 +119,10 @@ const email = document.getElementById('email')
 
 
 form.addEventListener('submit', (e) => {
+    formValidation()
     e.preventDefault()
 
-    formValidation()
+
 })
 
 const formValidation = (e) => {
