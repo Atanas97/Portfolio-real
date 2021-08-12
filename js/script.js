@@ -42,13 +42,17 @@ menuItems.forEach(item => {
 
 
 //Show certificate on mouse hover 
-const certificateShow = document.getElementById('show-certificate')
+const certificateShow = document.getElementById('display-certificate')
 const certificate = document.querySelector('.certificate')
-function showCertificate() {
+const certsJS = document.querySelectorAll('.js')
+const selftaught = document.getElementById('js-certs')
+
+
+
+function showCertificate(e) {
     certificate.classList.add('active')
-    console.log('hello')
 }
-console.log(certificateShow)
+
 function hideCertificate() {
     certificate.classList.remove('active')
 }
@@ -57,10 +61,24 @@ function moveCertificate(e) {
     certificate.style.left = e.clientX * .51 + 'px'
 }
 
+function showJS() {
+    certsJS.forEach(cert => {
+        cert.classList.add('visible')
+    })
+}
+
+function hideJS() {
+    certsJS.forEach(cert => {
+        cert.classList.remove('visible')
+    })
+}
+
+
 certificateShow.addEventListener('mouseenter', showCertificate)
 certificateShow.addEventListener('mouseleave', hideCertificate)
 certificateShow.addEventListener('mousemove', moveCertificate)
-
+selftaught.addEventListener('mouseenter', showJS)
+selftaught.addEventListener('mouseleave', hideJS)
 
 //Homescreen icon movement
 const layers = document.querySelectorAll('.layer')

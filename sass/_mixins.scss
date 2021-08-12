@@ -54,3 +54,18 @@
     }
     }
 }
+
+@mixin showingCert ($top, $left) {
+    display: block;
+    width: 100%;
+    max-width: 35rem;
+    position: absolute;
+    z-index: 111;
+    top: $top;
+    left: $left;
+    transform: scale(0, 0);
+    transition: transform 500ms ease-in-out;
+    
+
+    
+}
